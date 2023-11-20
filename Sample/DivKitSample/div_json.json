@@ -1,0 +1,407 @@
+{
+    "card": {
+        "log_id": "promotion_item",
+        "states": [
+            {
+                "div": {
+                    "content_alignment_vertical": "top",
+                    "height": {
+                        "type": "wrap_content"
+                    },
+                    "items": [
+                        {
+                            "height": {
+                                "type": "wrap_content"
+                            },
+                            "items": [
+                                {
+                                    "alignment_horizontal": "left",
+                                    "alignment_vertical": "top",
+                                    "height": {
+                                        "type": "fixed",
+                                        "value": 128
+                                    },
+                                    "image_url": "@{main_image_url}",
+                                    "margins": {
+                                        "bottom": 0,
+                                        "left": 0,
+                                        "right": 16,
+                                        "top": 0
+                                    },
+                                    "type": "image",
+                                    "width": {
+                                        "type": "fixed",
+                                        "value": 102
+                                    }
+                                },
+                                {
+                                    "height": {
+                                        "type": "match_parent",
+                                        "weight": 1
+                                    },
+                                    "items": [
+                                        {
+                                            "content_alignment_horizontal": "left",
+                                            "content_alignment_vertical": "top",
+                                            "height": {
+                                                "type": "wrap_content"
+                                            },
+                                            "items": [
+                                                {
+                                                    "text": "@{text_short_period}",
+                                                    "text_color": "#aaa9a9",
+                                                    "type": "text_block"
+                                                },
+                                                {
+                                                    "font_size": 15,
+                                                    "font_weight": "700",
+                                                    "margins": {
+                                                        "top": 8
+                                                    },
+                                                    "text": "@{text_what}",
+                                                    "text_color": "#24191b",
+                                                    "type": "text_block"
+                                                },
+                                                {
+                                                    "margins": {
+                                                        "top": 8
+                                                    },
+                                                    "text": "@{text_rule}",
+                                                    "text_color": "#595959",
+                                                    "type": "text_block"
+                                                }
+                                            ],
+                                            "orientation": "vertical",
+                                            "type": "container",
+                                            "width": {
+                                                "type": "wrap_content"
+                                            }
+                                        },
+                                        {
+                                            "type": "empty_block"
+                                        },
+                                        {
+                                            "content_alignment_horizontal": "center",
+                                            "content_alignment_vertical": "center",
+                                            "height": {
+                                                "type": "wrap_content"
+                                            },
+                                            "items": [
+                                                {
+                                                    "height": {
+                                                        "type": "wrap_content"
+                                                    },
+                                                    "items": [
+                                                        {
+                                                            "div_id": "item1",
+                                                            "states": [
+                                                                {
+                                                                    "div": {
+                                                                        "actions": [
+                                                                            {
+                                                                                "log_id": "change_favourite_state",
+                                                                                "payload": "true",
+
+                                                                                "url": "div-action://set_state?state_id=0/item1/second"
+                                                                            }
+                                                                        ],
+                                                                        "background_color": "#F1F1F1",
+                                                                        "type": "favourite_block"
+                                                                    },
+                                                                    "state_id": "first"
+                                                                },
+                                                                {
+                                                                    "div": {
+                                                                        "actions": [
+                                                                            {
+                                                                                "log_id": "change_favourite_state",
+                                                                                "payload": "false",
+
+                                                                                "url": "div-action://set_state?state_id=0/item1/first"
+                                                                            }
+                                                                        ],
+                                                                        "background_color": "#FFF5E5",
+                                                                        "border": {
+                                                                            "corner_radius": 6,
+                                                                            "stroke": {
+                                                                                "color": "#FF9900",
+                                                                                "width": 1
+                                                                            }
+                                                                        },
+                                                                        "icon_color": "#FF9900",
+                                                                        "type": "favourite_block"
+                                                                    },
+                                                                    "state_id": "second"
+                                                                }
+                                                            ],
+                                                            "type": "state"
+                                                        }
+                                                    ],
+                                                    "type": "container",
+                                                    "width": {
+                                                        "type": "match_parent",
+                                                        "weight": 1
+                                                    }
+                                                },
+                                                {
+                                                    "items": [
+                                                        {
+                                                            "content_alignment_horizontal": "center",
+                                                            "content_alignment_vertical": "center",
+                                                            "height": {
+                                                                "type": "fixed",
+                                                                "value": 24
+                                                            },
+                                                            "items": [
+                                                                {
+                                                                    "height": {
+                                                                        "type": "fixed",
+                                                                        "value": 22
+                                                                    },
+                                                                    "image_url": "@{percent_background_image_url}",
+                                                                    "type": "image_block",
+                                                                    "width": {
+                                                                        "type": "fixed",
+                                                                        "value": 22
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "height": {
+                                                                        "type": "fixed",
+                                                                        "value": 10
+                                                                    },
+                                                                    "image_url": "@{percent_image_url}",
+                                                                    "type": "image_block",
+                                                                    "width": {
+                                                                        "type": "fixed",
+                                                                        "value": 10
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "orientation": "overlap",
+                                                            "type": "container",
+                                                            "width": {
+                                                                "type": "fixed",
+                                                                "value": 24
+                                                            }
+                                                        }
+                                                    ],
+                                                    "orientation": "horizontal",
+                                                    "type": "container",
+                                                    "width": {
+                                                        "type": "wrap_content"
+                                                    }
+                                                }
+                                            ],
+                                            "orientation": "horizontal",
+                                            "type": "container",
+                                            "width": {
+                                                "type": "match_parent"
+                                            }
+                                        }
+                                    ],
+                                    "orientation": "vertical",
+                                    "type": "container",
+                                    "width": {
+                                        "type": "match_parent",
+                                        "weight": 1
+                                    }
+                                }
+                            ],
+                            "orientation": "horizontal",
+                            "type": "container",
+                            "width": {
+                                "type": "match_parent"
+                            }
+                        }
+                    ],
+                    "orientation": "vertical",
+                    "paddings": {
+                        "bottom": 12,
+                        "left": 16,
+                        "right": 16,
+                        "top": 12
+                    },
+                    "type": "container",
+                    "width": {
+                        "type": "match_parent"
+                    }
+                },
+                "state_id": 0
+            }
+        ],
+        "variables": [
+            {
+                "name": "text_rule",
+                "type": "string",
+                "value": "{test_rule} (ещё одна акция)"
+            },
+            {
+                "name": "text_what",
+                "type": "string",
+                "value": "Подарок!"
+            },
+            {
+                "name": "text_title",
+                "type": "string",
+                "value": "Baraka TOP!"
+            },
+            {
+                "name": "text_capital",
+                "type": "string",
+                "value": "Б"
+            },
+            {
+                "name": "text_category",
+                "type": "string",
+                "value": "Бонусы"
+            },
+            {
+                "name": "main_image_url",
+                "type": "string",
+                "value": "https://storage.yandexcloud.net/slyanov-s3/app_images/img_sale_pepsi_set.png"
+            },
+            {
+                "name": "bonus_image_url",
+                "type": "string",
+                "value": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/991d2fc2-f40d-4fd4-a036-7f9a547bcf92"
+            },
+            {
+                "name": "text_full_terms",
+                "type": "string",
+                "value": "Акция проводится с 08.06.2023 по 01.09.2023 в магазинах Baraka Market. Список товаров, учавствующих в акции, уточняйте в магазинах."
+            },
+            {
+                "name": "text_description",
+                "type": "string",
+                "value": "Разнообразный и богатый опыт говорит нам, что высококачественный прототип будущего проекта создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса дальнейших направлений развития. Приятно, граждане, наблюдать, как непосредственные участники технического прогресса, вне зависимости от их уровня, должны быть подвергнуты целой серии независимых исследований. "
+            },
+            {
+                "name": "text_full_period",
+                "type": "string",
+                "value": "16 ноября – 16 февраля"
+            },
+            {
+                "name": "percent_image_url",
+                "type": "string",
+                "value": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/83aac086-d9a2-46a7-baf1-dc9126bc43d4"
+            },
+            {
+                "name": "text_hashtag_left",
+                "type": "string",
+                "value": "#Акции"
+            },
+            {
+                "name": "text_short_period",
+                "type": "string",
+                "value": "16.11.2023 – 16.02.2024"
+            },
+            {
+                "name": "text_hashtag_right",
+                "type": "string",
+                "value": "#Бонусы"
+            },
+            {
+                "name": "favourite_image_url",
+                "type": "string",
+                "value": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4105fc01-5343-4ac6-8ccf-3a0fd4c4d09e"
+            },
+            {
+                "name": "bonus_background_image_url",
+                "type": "string",
+                "value": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6ce134d6-70af-4052-867d-bd1c6f8a6c78"
+            },
+            {
+                "name": "percent_background_image_url",
+                "type": "string",
+                "value": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2a3792e0-2ee0-4e81-ab18-abe39edcccf0"
+            }
+        ]
+    },
+    "templates": {
+        "empty_block": {
+            "height": {
+                "type": "match_parent",
+                "weight": 1
+            },
+            "text": " ",
+            "type": "text"
+        },
+        "favourite_block": {
+            "background": [
+                {
+                    "$color": "background_color",
+                    "type": "solid"
+                }
+            ],
+            "border": {
+                "corner_radius": 6
+            },
+            "height": {
+                "type": "wrap_content"
+            },
+            "items": [
+                {
+                    "$tint_color": "icon_color",
+                    "height": {
+                        "type": "fixed",
+                        "value": 32
+                    },
+                    "image_url": "@{favourite_image_url}",
+                    "type": "image_block_size"
+                }
+            ],
+            "paddings": {
+                "bottom": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0
+            },
+            "type": "container",
+            "width": {
+                "type": "wrap_content"
+            }
+        },
+        "image_block": {
+            "height": {
+                "type": "wrap_content"
+            },
+            "type": "image",
+            "width": {
+                "type": "wrap_content"
+            }
+        },
+        "image_block_size": {
+            "height": {
+                "type": "fixed",
+                "value": 32
+            },
+            "image_url": "@{image_url}",
+            "paddings": {
+                "bottom": 6,
+                "left": 12,
+                "right": 12,
+                "top": 6
+            },
+            "type": "image",
+            "width": {
+                "type": "fixed",
+                "value": 44
+            }
+        },
+        "text_block": {
+            "font_size": 12,
+            "font_weight": "500",
+            "height": {
+                "type": "wrap_content"
+            },
+            "letter_spacing": 0,
+            "line_height": 16,
+            "text_alignment_horizontal": "left",
+            "type": "text",
+            "width": {
+                "type": "wrap_content"
+            }
+        }
+    }
+}

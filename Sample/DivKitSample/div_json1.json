@@ -1,0 +1,484 @@
+{
+          "card" : {
+            "variables" : [
+              {
+                "name" : "text_rule",
+                "type" : "string",
+                "value" : "При покупке 2 шт. Pepsi 1,5L."
+              },
+              {
+                "name" : "text_what",
+                "type" : "string",
+                "value" : "Стакан в подарок!"
+              },
+              {
+                "name" : "main_image_url",
+                "type" : "string",
+                "value" : "https://storage.yandexcloud.net/slyanov-s3/app_images/img_sale_pepsi_set.png"
+              },
+              {
+                "name" : "bonus_image_url",
+                "type" : "string",
+                "value" : "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/991d2fc2-f40d-4fd4-a036-7f9a547bcf92"
+              },
+              {
+                "name" : "percent_image_url",
+                "type" : "string",
+                "value" : "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/83aac086-d9a2-46a7-baf1-dc9126bc43d4"
+              },
+              {
+                "name" : "text_short_period",
+                "type" : "string",
+                "value" : "08.06.2023 – 21.06.2023"
+              },
+              {
+                "name" : "favourite_image_url",
+                "type" : "string",
+                "value" : "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4105fc01-5343-4ac6-8ccf-3a0fd4c4d09e"
+              },
+              {
+                "name" : "bonus_background_image_url",
+                "type" : "string",
+                "value" : "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6ce134d6-70af-4052-867d-bd1c6f8a6c78"
+              },
+              {
+                "name" : "percent_background_image_url",
+                "type" : "string",
+                "value" : "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2a3792e0-2ee0-4e81-ab18-abe39edcccf0"
+              }
+            ],
+            "log_id" : "promotion_item",
+            "states" : [
+              {
+                "div" : {
+                  "height" : {
+                    "type" : "wrap_content"
+                  },
+                  "width" : {
+                    "type" : "match_parent"
+                  },
+                  "paddings" : {
+                    "bottom" : 12,
+                    "top" : 12,
+                    "left" : 16,
+                    "right" : 16
+                  },
+                  "content_alignment_vertical" : "top",
+                  "type" : "container",
+                  "orientation" : "vertical",
+                  "items" : [
+                    {
+
+                      
+                      "orientation" : "horizontal",
+                      "items" : [
+                        {
+                          "height" : {
+                            "type" : "fixed",
+                            "value" : 128
+                          },
+                          "margins" : {
+                            "bottom" : 0,
+                            "top" : 0,
+                            "left" : 0,
+                            "right" : 16
+                          },
+                          "alignment_horizontal" : "left",
+                          "image_url" : "@{main_image_url}",
+                          "width" : {
+                            "type" : "fixed",
+                            "value" : 102
+                          },
+                          "type" : "image",
+                          "alignment_vertical" : "top"
+                        },
+                        
+                        
+                        
+                        
+                        {
+                          "orientation" : "vertical",
+                          "items" : [
+                            {
+                              "height" : {
+                                "type" : "wrap_content"
+                              },
+                              "width" : {
+                                "type" : "wrap_content"
+                              },
+                              "content_alignment_vertical" : "top",
+                              "type" : "container",
+                              "orientation" : "vertical",
+                              "content_alignment_horizontal" : "left",
+                              "items" : [
+                                {
+                                  "type" : "text_block",
+                                  "text" : "@{text_short_period}",
+                                  "text_color" : "#aaa9a9"
+                                },
+                                {
+                                  "margins" : {
+                                    "top" : 8
+                                  },
+                                  "font_size" : 15,
+                                  "font_weight" : "700",
+                                  "text_color" : "#24191b",
+                                  "type" : "text_block",
+                                  "text" : "@{text_what}"
+                                },
+                                {
+                                  "margins" : {
+                                    "top" : 8
+                                  },
+                                  "text_color" : "#595959",
+                                  "type" : "text_block",
+                                  "text" : "@{text_rule}"
+                                }
+                              ]
+                            },
+                            {
+                              "type" : "empty_block"
+                            },
+                            
+                            {
+                              "state_id": 0,
+                              "div": {
+                                "type": "state",
+                                "div_id": "sample",
+                                "states": [
+                                  {
+                                    "state_id": "first",
+                                    "div": {
+                                      "type": "image_block",
+                                      "image_url": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4105fc01-5343-4ac6-8ccf-3a0fd4c4d09e",
+                                      "actions": [
+                                        {
+                                          "log_id": "switch_state1",
+                                          "url": "div-action://set_state?state_id=0/sample/second"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "state_id": "second",
+                                    "div": {
+                                      "type": "image_block",
+                                      "image_url": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4105fc01-5343-4ac6-8ccf-3a0fd4c4d09e",
+                                      "actions": [
+                                        {
+                                          "log_id": "switch_state1",
+                                          "url": "div-action://set_state?state_id=0/sample/first"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+
+
+                            {
+                              "height" : {
+                                "type" : "wrap_content"
+                              },
+                              "width" : {
+                                "type" : "match_parent"
+                              },
+                              "content_alignment_vertical" : "center",
+                              "type" : "container",
+                              "orientation" : "horizontal",
+                              "content_alignment_horizontal" : "center",
+                              "items" : [
+
+
+                                {
+                                  "items" : [
+                                    {
+                                      "type" : "state",
+                                  
+                                      "states" : [
+                                        {
+                                          "div" : {
+                                            "type" : "favourite_block",
+                                            "actions" : [
+                                              {
+                                                "url" : "div-action:\/\/set_state?state_id=0\/item1\/second",
+                                                "log_id" : "change_favourite_state",
+                                                "payload" : "true"
+                                              }
+                                            ],
+                                            "background_color" : "#F1F1F1"
+                                          },
+                                          "state_id" : "first"
+                                        },
+                                        {
+                                          "div" : {
+                                            "icon_color" : "#FF9900",
+                                            "border" : {
+                                              "corner_radius" : 6,
+                                              "stroke" : {
+                                                "color" : "#FF9900",
+                                                "width" : 1
+                                              }
+                                            },
+                                            "background_color" : "#FFF5E5",
+                                            "type" : "favourite_block",
+                                            "actions" : [
+                                              {
+                                                "url" : "div-action:\/\/set_state?state_id=0\/item1\/first",
+                                                "log_id" : "change_favourite_state"
+                                              }
+                                            ]
+                                          },
+                                          "state_id" : "second"
+                                        }
+                                      ],
+                                      "div_id" : "item1"
+                                    }
+                                  ],
+                                  "type" : "container",
+                                  "width" : {
+                                    "type" : "match_parent",
+                                    "weight" : 1
+                                  },
+                                  "height" : {
+                                    "type" : "wrap_content"
+                                  }
+                                },
+
+                              
+
+                                
+                                {
+                                  "items" : [
+                                    {
+                                      "height" : {
+                                        "type" : "fixed",
+                                        "value" : 24
+                                      },
+                                      "width" : {
+                                        "type" : "fixed",
+                                        "value" : 24
+                                      },
+                                      "content_alignment_vertical" : "center",
+                                      "type" : "container",
+                                      "orientation" : "overlap",
+                                      "content_alignment_horizontal" : "center",
+                                      "items" : [
+                                        {
+                                          "image_url" : "@{percent_background_image_url}",
+                                          "type" : "image_block",
+                                          "width" : {
+                                            "type" : "fixed",
+                                            "value" : 22
+                                          },
+                                          "height" : {
+                                            "type" : "fixed",
+                                            "value" : 22
+                                          }
+                                        },
+                                        {
+                                          "image_url" : "@{percent_image_url}",
+                                          "type" : "image_block",
+                                          "width" : {
+                                            "type" : "fixed",
+                                            "value" : 10
+                                          },
+                                          "height" : {
+                                            "type" : "fixed",
+                                            "value" : 10
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "type" : "container",
+                                  "width" : {
+                                    "type" : "wrap_content"
+                                  },
+                                  "orientation" : "horizontal"
+                                },
+
+
+                                {
+                                  "type" : "empty_block"
+
+                                },
+                                
+
+
+                                {
+                                  "items" : [
+                                    {
+                                      "height" : {
+                                        "type" : "fixed",
+                                        "value" : 24
+                                      },
+                                      "width" : {
+                                        "type" : "fixed",
+                                        "value" : 24
+                                      },
+                                      "content_alignment_vertical" : "center",
+                                      "type" : "container",
+                                      "orientation" : "overlap",
+                                      "content_alignment_horizontal" : "center",
+                                      "items" : [
+                                        {
+                                          "image_url" : "@{percent_background_image_url}",
+                                          "type" : "image_block",
+                                          "width" : {
+                                            "type" : "fixed",
+                                            "value" : 22
+                                          },
+                                          "height" : {
+                                            "type" : "fixed",
+                                            "value" : 22
+                                          }
+                                        },
+                                        {
+                                          "image_url" : "@{percent_image_url}",
+                                          "type" : "image_block",
+                                          "width" : {
+                                            "type" : "fixed",
+                                            "value" : 10
+                                          },
+                                          "height" : {
+                                            "type" : "fixed",
+                                            "value" : 10
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "type" : "container",
+                                  "width" : {
+                                    "type" : "wrap_content"
+                                  },
+                                  "orientation" : "horizontal"
+                                }
+                              ]
+                            }
+                          ],
+                          "type" : "container",
+                          "width" : {
+                            "type" : "match_parent",
+                            "weight" : 1
+                          },
+                          "height" : {
+                            "type" : "match_parent",
+                            "weight" : 1
+                          }
+                        }
+                      ],
+                      "type" : "container",
+                      "width" : {
+                        "type" : "match_parent"
+                      },
+                      "height" : {
+                        "type" : "wrap_content"
+                      }
+                    }
+                  ]
+                },
+                "state_id" : 0
+              }
+            ]
+          },
+          "templates" : {
+            "text_block" : {
+              "height" : {
+                "type" : "wrap_content"
+              },
+              "line_height" : 16,
+              "letter_spacing" : 0,
+              "width" : {
+                "type" : "wrap_content"
+              },
+              "text_alignment_horizontal" : "left",
+              "font_weight" : "500",
+              "type" : "text",
+              "font_size" : 12
+            },
+            "image_block1" : {
+              "type" : "image",
+              "width" : {
+                "type" : "wrap_content"
+              },
+              "height" : {
+                "type" : "wrap_content"
+             }
+            }, 
+            "image_block": {
+              "type": "image",
+              "image_url": "@{image_url}",
+              "width": {
+                "type": "fixed",
+                "value": 44
+              },
+              "height": {
+                "type": "fixed",
+                "value": 32
+              },
+              "paddings": {
+                "top": 6,
+                "bottom": 6,
+                "left": 12,
+                "right": 12
+              },
+              "background": [
+                {
+                  "type": "solid",
+                  "color": "#34495E"
+                }
+              ],
+              "border": {
+                "corner_radius": 6
+              }
+            },
+
+            "favourite_block" : {
+              "border" : {
+                "corner_radius" : 6
+              },
+              "height" : {
+                "type" : "wrap_content"
+              },
+              "width" : {
+                "type" : "wrap_content"
+              },
+              "paddings" : {
+                "bottom" : 8,
+                "top" : 8,
+                "left" : 12,
+                "right" : 12
+              },
+              "type" : "container",
+              "background" : [
+                {
+                  "type" : "solid",
+                  "$color" : "background_color"
+                }
+              ],
+              "items" : [
+                {
+                  "image_url" : "@{favourite_image_url}",
+                  "type" : "image_block",
+                  "height" : {
+                    "type" : "fixed",
+                    "value" : 15
+                  },
+                  "$tint_color" : "icon_color"
+                }
+              ]
+            },
+            "empty_block" : {
+              "type" : "text",
+              "text" : " ",
+              "height" : {
+                "type" : "match_parent",
+                "weight" : 1
+              }
+            }
+          }
+        }
+
